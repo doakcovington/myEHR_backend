@@ -17,15 +17,15 @@ ActiveRecord::Schema.define(version: 2020_07_02_205218) do
 
   create_table "charts", force: :cascade do |t|
     t.string "name"
-    t.date "dob"
+    t.string "dob"
     t.string "pcp"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "records", force: :cascade do |t|
-    t.date "date"
-    t.datetime "time"
+    t.string "date"
+    t.string "time"
     t.string "blood_pressure"
     t.float "temperature"
     t.integer "pulse"
