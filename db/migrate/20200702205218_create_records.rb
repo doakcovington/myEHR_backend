@@ -1,8 +1,8 @@
 class CreateRecords < ActiveRecord::Migration[6.0]
   def change
     create_table :records do |t|
-      t.date :date
-      t.datetime :time
+      t.string :date
+      t.string :time
       t.string :blood_pressure
       t.float :temperature
       t.integer :pulse
