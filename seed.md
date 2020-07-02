@@ -1,0 +1,1 @@
+Record.create(date: 7/2/2020, 2020-07-02 13:57:00, "120/60", 98.5, 78, "feeling good", chart_id: doak.id)
