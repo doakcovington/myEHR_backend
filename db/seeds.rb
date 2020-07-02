@@ -6,3 +6,5 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 doak = Chart.create(name: "Doak", dob: "03/09/1991", pcp: "Dr. Hoffman")
+
+Record.create(date: 7/2/2020, 2020-07-02 13:57:00, "120/60", 98.5, 78, "feeling good", chart_id: doak.id)
