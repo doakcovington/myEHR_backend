@@ -8,7 +8,8 @@ class CreateRecords < ActiveRecord::Migration[6.0]
       t.integer :pulse
       t.integer :pain
       t.text :comments
-      t.integer :chart_id
+      t.bigint "chart_id"
+      t.index ["chart_id"], name: "index_records_on_chart_id"
 
       t.timestamps
     end

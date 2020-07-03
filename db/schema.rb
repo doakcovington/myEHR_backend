@@ -31,9 +31,10 @@ ActiveRecord::Schema.define(version: 2020_07_02_205218) do
     t.integer "pulse"
     t.integer "pain"
     t.text "comments"
-    t.integer "chart_id"
+    t.bigint "chart_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["chart_id"], name: "index_records_on_chart_id"
   end
 
 end
