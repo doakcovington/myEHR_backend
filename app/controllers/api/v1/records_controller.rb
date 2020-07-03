@@ -6,6 +6,7 @@ class Api::V1::RecordsController < ApplicationController
 
     def create 
         record = Record.new(record_params)
+        byebug
         if record.save
             render json: record, status: :accepted
         else
@@ -17,7 +18,7 @@ class Api::V1::RecordsController < ApplicationController
     private
 
     def record_params
-        params.permit(:record).permit(:date, :time, :blood_pressure, :temperature, :pulse, :pain, :comments, :chart_id)
+        params.require(:record).permit(:date, :time, :blood_pressure, :temperature, :pulse, :pain, :comments, :chart_id)
     end
 
 end
