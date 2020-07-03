@@ -1,7 +1,7 @@
 class Api::V1::RecordsController < ApplicationController
     def index
         records = Record.all
-        render json: records
+        render json: RecordSerializer.new(records) #data is now in an object which contains an array of objects (nested data)
     end
 
     def create 
