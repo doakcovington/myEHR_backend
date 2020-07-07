@@ -6,11 +6,8 @@ class Api::V1::RecordsController < ApplicationController
 
     def create 
         record = Record.new(record_params)
-        byebug
         if record.save
-            render json: record, status: :accepted
-        else
-            render json: {error: record.errors.full_messages}, status: :unprocessible_entity
+            render json: RecordSerializer.new(record), status: :accepted
         end
     end
 
@@ -18,7 +15,7 @@ class Api::V1::RecordsController < ApplicationController
     private
 
     def record_params
-        params.require(:record).permit(:date, :time, :blood_pressure, :temperature, :pulse, :pain, :comments, :chart_id)
+        params.require(:record).permit(:temperature, :pulse, :pain, :comments, :chart_id)
     end
 
 end
