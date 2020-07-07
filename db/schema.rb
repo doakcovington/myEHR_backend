@@ -16,21 +16,16 @@ ActiveRecord::Schema.define(version: 2020_07_03_171027) do
   enable_extension "plpgsql"
 
   create_table "charts", force: :cascade do |t|
-    t.string "name"
-    t.string "dob"
     t.string "pcp"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "records", force: :cascade do |t|
-    t.string "date"
-    t.string "time"
-    t.string "blood_pressure"
-    t.float "temperature"
-    t.integer "pulse"
-    t.integer "pain"
-    t.text "comments"
+    t.string "temperature"
+    t.string "pulse"
+    t.string "pain"
+    t.string "comments"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "chart_id", null: false
