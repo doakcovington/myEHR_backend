@@ -11,6 +11,16 @@ class Api::V1::RecordsController < ApplicationController
         end
     end
 
+    def destroy
+        record = Record.find(params[:id])
+        unless record.nil?
+            record.destroy
+            render json: record
+        else
+            render json: { error: "Record not found." }, status: 404
+        end
+    end
+
 
     private
 
