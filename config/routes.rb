@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   namespace :api do #api
     namespace :v1 do #version
-      resources :records, only: [:index, :create, :delete]
+      resources :records, only: [:index, :create, :destroy]
     end
   end
 
