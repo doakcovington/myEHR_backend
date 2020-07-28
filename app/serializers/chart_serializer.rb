@@ -1,4 +1,4 @@
 class ChartSerializer
   include FastJsonapi::ObjectSerializer
-  attributes  :name, :pcp
+  attributes  :name, :pcp, :dob
 end
