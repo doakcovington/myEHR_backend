@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   namespace :api do #api
     namespace :v1 do #version
       resources :records, only: [:index, :create, :destroy]
+      resources :charts, only: [:index]
     end
   end
 
