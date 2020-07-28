@@ -1,6 +1,6 @@
 class Api::V1::ChartsController < ApplicationController
     def index
-        chart = Chart.all 
-        render json: chart
+        charts = Chart.all 
+        render json: ChartSerializer.new(charts)
     end
 end
