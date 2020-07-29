@@ -25,7 +25,7 @@ class Api::V1::RecordsController < ApplicationController
     private
 
     def record_params
-        params.require(:record).permit(:temperature, :pulse, :pain, :comments, :chart_id)
+        params.require(:record).permit(:temperature, :systolic, :diastolic, :pulse, :pain, :comments, :chart_id)
     end
 
 end
